@@ -17,7 +17,29 @@ export async function POST(req: Request, { params }: { params: { id: string; pat
     });
   }
 
-  const body = await req.json();
+  // 檢查請求是否有內容
+  const contentLength = req.headers.get("content-length");
+  if (!contentLength || contentLength === "0") {
+    return new Response("Request body is empty", {
+      status: 400,
+    });
+  }
+
+  let body;
+  try {
+    const text = await req.text();
+    if (!text.trim()) {
+      return new Response("Request body is empty", {
+        status: 400,
+      });
+    }
+    body = JSON.parse(text);
+  } catch (error) {
+    console.error("JSON parsing error:", error);
+    return new Response("Invalid JSON in request body", {
+      status: 400,
+    });
+  }
 
   try {
     let combinedPath;
