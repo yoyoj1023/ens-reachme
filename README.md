@@ -1,4 +1,4 @@
-# 🏗 Scaffold-Alchemy v
+# 🏗 Scaffold-Alchemy v0.0.1 main
 
 Scaffold-Alchemy is a fork of the popular starter project [Scaffold-Eth 2](https://scaffoldeth.io/). It is everything you need to build dApps on Ethereum. You can get started immediately NextJS, TypeScript, Hardhat, AccountKit, Enhanced APIs and Subgraphs 🤩
 
