@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { ConnectButton } from "~~/components/scaffold-alchemy";
 import { useOutsideClick } from "~~/hooks/scaffold-alchemy";
 
@@ -18,6 +18,11 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/",
+  },
+  {
+    label: "ENS 搜尋器",
+    href: "/ens-search",
+    icon: <MagnifyingGlassIcon className="h-4 w-4" />,
   },
   {
     label: "Debug Contracts",
