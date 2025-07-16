@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-alchemy/contract"
 const deployedContracts = {
   11155111: {
     Counter: {
-      address: "0x27b50a01c4e7159ea0dd5b723788d0265c044fda",
+      address: "0x609f9ea9565f8222361c55ce590de9cc41379d7f",
       abi: [
         {
           type: "constructor",
@@ -47,6 +47,225 @@ const deployedContracts = {
               name: "",
               type: "uint256",
               baseType: "uint256",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+        },
+      ],
+      inheritedFunctions: {},
+    },
+    KYCRegistry: {
+      address: "0x566806b0446a96d8cfdb9e39b84044226bf66d97",
+      abi: [
+        {
+          type: "constructor",
+          stateMutability: "nonpayable",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              baseType: "address",
+              indexed: true,
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              baseType: "address",
+              indexed: true,
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "event",
+          name: "UserVerificationRemoved",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              baseType: "address",
+              indexed: true,
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "event",
+          name: "UserVerified",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              baseType: "address",
+              indexed: true,
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "function",
+          name: "addVerifiedUser",
+          stateMutability: "nonpayable",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "function",
+          name: "isVerified",
+          stateMutability: "view",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              baseType: "bool",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+        },
+        {
+          type: "function",
+          name: "owner",
+          stateMutability: "view",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+        },
+        {
+          type: "function",
+          name: "removeVerifiedUser",
+          stateMutability: "nonpayable",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          stateMutability: "nonpayable",
+          inputs: [],
+          outputs: [],
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          stateMutability: "nonpayable",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [],
+        },
+        {
+          type: "function",
+          name: "verifiedUsers",
+          stateMutability: "view",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              baseType: "address",
+              components: null,
+              arrayLength: null,
+              arrayChildren: null,
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              baseType: "bool",
               components: null,
               arrayLength: null,
               arrayChildren: null,
